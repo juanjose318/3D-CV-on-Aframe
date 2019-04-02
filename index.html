@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v3.3.0/dist/aframe-physics-system.min.js"></script>
+    <script src="https://oscarmarinmiro.github.io/aframe-video-controls" ></script>
+    <script src="js/main.js"></script>
+    <title>CV Juan Jose Munoz</title>
+</head>
+<body>
+    <a-scene>
+         
+        <a-assets>
+
+        <!-- Textures -->
+
+        <img id="sky" src="assets/cloudslake.jpg">
+        <img id="woodTexture" src="assets/woodtexture.jpg">
+        <img id="grassTexture" src="assets/grassTexture.jpg">
+        <img id="wallTexture" src="assets/wallTexture.jpg">
+        <img id="ceilingTexture" src="assets/ceilingTexture.jpg">
+
+
+        <!--- 3D models  -->
+
+        <a-asset-item id ="ground" src="assets/ground.obj"></a-asset-item>
+        <a-asset-item id ="floor" src="assets/floor.obj"></a-asset-item>
+        <a-asset-item id ="walls" src="assets/walls.obj"></a-asset-item>
+        <a-asset-item id ="ceiling" src="assets/ceiling.obj"></a-asset-item>
+        <a-asset-item id="base" src="assets/base.obj"> </a-asset-item>
+        <a-asset-item id="coach" src="assets/coach.obj"></a-asset-item>
+        <a-asset-item id="pilar" src="assets/pilar.obj"></a-asset-item>
+        <a-asset-item id="pilarMtl" src="assets/pilar.mtl"></a-asset-item>
+        <a-asset-item id="donut" src="assets/Donut.obj"></a-asset-item>
+        <a-asset-item id="donutMtl" src="assets/Donut.mtl"></a-asset-item>
+
+      
+        <!-- Portfolio -->
+
+        <img id="logo01"  src="assets/logo01.png" >
+        <img id="logo02"  src="assets/logo02.png" >
+        <img id="logo03"  src="assets/logo03.jpg" >
+        <img id="logo04"  src="assets/logo04.png" >
+        <img id="logo05"  src="assets/logo05.png" >
+        <img id="foto01" src="assets/foto01.JPG">
+        <img id="foto02" src="assets/foto02.png">
+        <img id="foto03" src="assets/foto03.jpeg">
+        <img id="foto04" src="assets/foto04.jpeg">
+        <img id="web01" src="assets/website01.PNG">
+        <img id="web02" src="assets/website02.PNG">
+        <img id="web03" src="assets/website03.PNG">
+        <img id="web04" src="assets/website04.PNG">
+        <img id="web05" src="assets/website05.PNG">
+        <img id="web06" src="assets/website06.PNG">
+        <img id="web07" src="assets/website07.PNG">
+        <img id="cv" src="assets/CV-01.png">
+    
+        <video id="video" autoplay loop ="false" src="assets/video.mp4"></video>
+        
+
+
+        
+        
+
+        </a-assets>
+
+
+        <a-sky src="#sky"></a-sky>
+        
+        <!-- Camera  -->
+
+        <a-entity position="-0.33999999999999997 1.47 14.014988371016845"  dynamic-body="shape:auto; mass: 2">
+            <a-camera position="0.005263100956844892 0 6.8221212386275045" rotation="-1.8334649444186348 -1.7188733853924696 0" camera="active:false" look-controls="" wasd-controls="" data-aframe-inspector-original-camera=""></a-camera>
+        </a-entity>
+
+        <!-- Lighting -->
+        <a-light></a-light>
+        <a-entity light="color:#f29913;intensity:7.84;castShadow:true;distance:20;type:point;decay:2.13" position="-0.20989043694876486 13.860044013374345 -5.200698594581668" data-aframe-default-light="" aframe-injected="" rotation="0.43 0.29 0.38"></a-entity>
+        <a-entity light="color:#9b22e3;intensity:7.84;castShadow:true;distance:4.47;type:point;decay:1.66" position="4.431 2.506 -1.9429848365509264" data-aframe-default-light="" aframe-injected="" rotation="0.43 0.29 0.38"></a-entity>
+        <a-entity light="color:#0670ff;intensity:7.84;castShadow:true;distance:4.47;type:point;decay:1.66" position="-4.158214721005385 2.506 -1.5362575815299557" data-aframe-default-light="" aframe-injected="" rotation="0.43 0.29 0.38"></a-entity>
+        <a-entity light="color:#cdbe38;intensity:7.84;castShadow:true;distance:4.47;type:point;decay:1.66" position="-3.7364920605960235 2.506 -7.491" data-aframe-default-light="" aframe-injected="" rotation="0.43 0.29 0.38"></a-entity>
+        <a-entity light="color:#1fd8e7;intensity:0.33999999999999997;castShadow:true;penumbra:0.16;distance:1;decay:1.73;angle:90" position="-10.296301971289745 2.5056668749897266 9.164476704814616" data-aframe-default-light="" aframe-injected="" rotation="0.43 0.29 0.38"></a-entity>
+        <a-entity light="color:#1fd8e7;intensity:7.84;castShadow:true;distance:4.47;type:point;decay:1.66" position="4.43108973912044 2.5056668749897266 -7.4908755588575175" data-aframe-default-light="" aframe-injected="" rotation="0.43 0.29 0.38"></a-entity>
+        <a-entity light="color:#061aff;intensity:9.3;castShadow:true;distance:6.67;type:point;decay:1.66" position="-0.5457599717792894 2.506 6.998165813250511" data-aframe-default-light="" aframe-injected="" rotation="0.43 0.29 0.38"></a-entity>
+
+        <!--Building -->
+        <a-obj-model src="#ground" geometry="" material="src: #grassTexture" scale="1.97 1 1.93" opacity="0.5"></a-obj-model>
+        <a-obj-model src="#floor" geometry="" material="src: #woodTexture" position="0 0 -4.85"  rotation="0 180 0" scale="1.7 1 2.31" ></a-obj-model>
+        <a-entity obj-model ="obj: #walls"  geometry="plane" material="src: #wallTexture" position="0 0 -4.85"  rotation="0 180 0" scale="1.7 1 2.31" static-body="shape:auto; mass: 2" ></a-entity>
+        <a-obj-model src="#ceiling" geometry="" material="color: #505050" position="0 -5.079999999999999 -4.85" rotation="0 180 0" scale="1.7 2.9800000000000004 2.31" ></a-obj-model>  
+        <a-obj-model src="#base" material="color:red" position="7.199870759261101 0.5975650669541741 -7.928920244311823" rotation="0 90 0" obj-model="" scale="0.78 0.22000000000000003 0.2900000000000001"></a-obj-model>
+        <a-obj-model src="#coach" material="color:purple" position="3.6239854075155873 0.842525498005747 -6.754717806994932" rotation="0 90 0" scale="0.5000000000000001 0.44000000000000006 0.84" obj-model=""></a-obj-model> 
+        <a-obj-model src="#donut" mtl="#donutMtl" position="-4.882671992801882 1.1439381492957037 -7.7344847273968504" scale="0.05 0.05 0.05" material="" obj-model=""></a-obj-model>  
+        <a-obj-model src="#pilar" mtl="#pilarMtl" position="-4.816694750347391 0.3884251291429188 -7.650054654081162" scale="0.5 0.36811314473689416 0.5" material="" obj-model=""></a-obj-model>
+        
+        <!-- logo's -->
+
+        <a-image src="#logo01" width="16" height="9" position="-4.508211737123288 1.5641740205317145 -10.52955370203868" scale="0.0852791710702377 0.09200000000000003 0.00001" material="side:front" geometry=""></a-image>
+        <a-image src="#logo02" width="16" height="9" position="-6.2545260484185485 1.5641740205317145 -10.52955370203868" scale="0.0852791710702377 0.09200000000000003 0.00001" material="side:front" geometry=""></a-image>
+        <a-image src="#logo03" width="16" height="9" position="-8.32506397311884 1.5641740205317145 -7.0522075836946465" scale="0.0852791710702377 0.09200000000000003 0.00001" material="side:front" geometry="" rotation="0 90 0"></a-image>        
+        <a-image src="#logo04" width="16" height="9" position="-8.32506397311884 1.5641740205317145 -9.103293343797109" scale="0.0852791710702377 0.09200000000000003 0.00001" material="side:front" geometry="" rotation="0 90 0"></a-image>
+        <a-image src="#logo05" width="16" height="9" position="-4.925168610912591 1.5641740205317145 -5.089" scale="0.0852791710702377 0.09200000000000003 0.00001" material="side:front" geometry="" rotation="0 180 0"></a-image>
+
+        <!-- foto's  -->
+        <a-image src="#foto01" position="-3.3518458470093595 1.4155440652242772 -4.526762733171872" scale="2.31 1.51 1" material="" geometry=""></a-image>
+        <a-image src="#foto02" position="-6.593731097755141 1.4155440652242772 -4.526762733171872" scale="2.31 1.51 1" material="" geometry=""></a-image>
+        <a-image src="#foto03" position="-8.339171508092816 1.4155440652242772 -3.006880092272846" scale="2.31 1.51 1" material="" geometry="" rotation="0 90 0"></a-image>
+        <a-image src="#foto04" position="-8.257920936634006 1.4155440652242772 -0.37633355116612766" scale="2.31 1.51 1" material="" geometry="" rotation="0 90 0"></a-image>
+
+        <!-- websites -->
+        <a-image src="#web01" position="3.7972356617269027 1.55822021200893 -4.644288584618762" material="" geometry="" scale="1.44 1.05 1"></a-image>
+        <a-image src="#web02" position="2.0286855616703625 1.55822021200893 -4.644288584618762" material="" geometry="" scale="1.44 1.05 1"></a-image>
+        <a-image src="#web03" position="2.0929928273920866 1.3849563018057065 -4.457765055645479" material="opacity:0.5" geometry="" scale="1.19 0.7000000000000001 1"></a-image>
+        <a-image src="#web04" position="2.946236418844078 1.3849563018057065 -4.138331135063097" material="opacity:0.75" geometry="" scale="0.76 0.7400000000000001 1"></a-image>
+        <a-image src="#web05" position="1.808200518581283 0.9267488922369274 -4.102962647844122" material="" geometry="" scale="1.19 0.7000000000000001 1"></a-image>
+        <a-image src="#web06" position="5.9615594359833946 1.55822021200893 -4.457765055645479" material="" geometry="" scale="1.5699999999999998 0.93 1"></a-image>
+        <a-image src="#web07" position="5.794031927230426 1.5819650185057217 -3.5384911460138477" material="opacity:0.5" geometry="" scale="1.19 0.7000000000000001 1"></a-image>
+        <!-- Video -->
+        <a-video src="#video" width="16" height="9" position="8.141769011430627 1.455989026683464 -7.814462938567765" scale="0.31999999999999995 0.14999999999999997 1" material="" geometry="" rotation="0 90 0"></a-video>
+
+        <!-- CV -->
+
+        <a-image src="#cv" position="0.5207337529251612 2.3539050684010183 7.19386867276039" rotation="0 180 0" scale="3 3 0.00001" material="side:front" geometry=""></a-image>
+
+    </a-scene> 
+    
+    </body>
