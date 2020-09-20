@@ -4,4 +4,4 @@ lowpoly 3d models made on blender
 
 ## Run 
 
-Start a local server on index.js 
+Start a local server on main.js 
